@@ -1,0 +1,23 @@
+/*=================*/
+/*Footer*/
+/*=================*/
+.footer{
+  padding:10px;
+  background-color: $theme;
+  a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+  .bug-btn{
+    background-color: #5faee3;
+    color: #fff;
+    border-radius: 0;
+    i{
+      font-size: 16px;
+      position: relative;
+      top: 2px;
+    }
+  }
+}

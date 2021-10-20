@@ -1,0 +1,597 @@
+<div class="page-title">Cases</div>
+<div class="container-fluid cases-wrapper">
+  <div class="page-white-section-wrapper mt-3">
+    <div class="section-header">
+      <div class="row align-items-center">
+        <div class="col-4">
+          <div class="title">Cases</div>
+        </div>
+        <div class="col-8 text-end">
+          <a href="javascript:void(0)" class="btn-light-ish"><i class="lab la-youtube changePosition "></i> View tutorial</a>
+          <a href="javascript:void(0)" class="btn-light-ish"><i class="lar la-file-pdf"></i></a>
+          <a href="javascript:void(0)" class="btn-light-ish "><i class="las la-cog"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="section-body">
+      <ul class="table-option">
+        <li>
+          <a href="javascript:void(0)"><i class="las la-folder-open"></i> &nbsp; Current Cases  &nbsp; <i class="las la-angle-down"></i></a>
+          <ul class="table-drop">
+            <li><a href="javascript:void(0)">Option1</a></li>
+            <li><a href="javascript:void(0)">Option2</a></li>
+            <li><a href="javascript:void(0)">Option3</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:void(0)"><i class="las la-file-excel"></i> </a></li>
+      </ul>
+      <div class="col-md-12 table-responsive">
+        <table datatable [dtOptions]="dtOptions"  class="row-border hover">
+          <thead>
+          <tr>
+            <th>
+              <label class="container-checkbox">
+                <input type="checkbox" class="all-checkbox" (change)="toggleAllCheck($event)">
+                <span class="checkmark"></span>
+              </label>
+            </th>
+            <th>#</th>
+            <th style="min-width: 100px">Added</th>
+            <th style="min-width: 100px">Due Date</th>
+            <th style="min-width: 100px">Subject</th>
+            <th style="min-width: 100px">Type</th>
+            <th style="min-width: 100px">Status</th>
+            <th style="min-width: 400px">Assigned Contractors</th>
+            <th style="min-width: 30px"></th>
+            <th style="min-width: 30px"></th>
+            <th style="min-width: 30px" class="text-end"><a href="javascript:void(0)"><i class="las la-sliders-h text-dark font-18"></i></a></th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2510</td>
+              <td>20/10/2021</td>
+              <td>20/10/2021</td>
+              <td>df</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <!--              <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2509</td>
+              <td>20/10/2021</td>
+              <td>20/10/2021</td>
+              <td>Maintenance Request 505 KF</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <!--              <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2506</td>
+              <td>20/10/2021</td>
+              <td>20/10/2021</td>
+              <td>test for budget</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Jhun Testing Email</td>
+              <td>
+                <!--              <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2504</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td></td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2503</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2501</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Leak in Unitfgfdg</td>
+              <td>Common Repairs</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2500</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 906</td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2499</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td></td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2498</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 505 KF</td>
+              <td> Repairs & Maintenance </td>
+              <td>New</td>
+              <td>Cachet Group New Zealand Ltd</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2497</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td> Repairs & Maintenance </td>
+              <td>Awaiting Contractor</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2500</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 906</td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2499</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td></td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2503</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2501</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Leak in Unitfgfdg</td>
+              <td>Common Repairs</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2498</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 505 KF</td>
+              <td> Repairs & Maintenance </td>
+              <td>New</td>
+              <td>Cachet Group New Zealand Ltd</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2497</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td> Repairs & Maintenance </td>
+              <td>Awaiting Contractor</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2510</td>
+              <td>20/10/2021</td>
+              <td>20/10/2021</td>
+              <td>df</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <!--              <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2509</td>
+              <td>20/10/2021</td>
+              <td>20/10/2021</td>
+              <td>Maintenance Request 505 KF</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <!--              <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2506</td>
+              <td>20/10/2021</td>
+              <td>20/10/2021</td>
+              <td>test for budget</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Jhun Testing Email</td>
+              <td>
+                <!--              <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2504</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td></td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2500</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 906</td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2499</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td></td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2498</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 505 KF</td>
+              <td> Repairs & Maintenance </td>
+              <td>New</td>
+              <td>Cachet Group New Zealand Ltd</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2497</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td> Repairs & Maintenance </td>
+              <td>Awaiting Contractor</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2500</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 906</td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2499</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td></td>
+              <td> Repairs & Maintenance</td>
+              <td>New</td>
+              <td>ACE Handy Andy</td>
+              <td>
+                <!--                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>-->
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+            <tr (click)="ViewSingle()">
+              <td>
+                <label class="container-checkbox">
+                  <input type="checkbox" class="row-checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>2503</td>
+              <td>19/10/2021</td>
+              <td>19/10/2021</td>
+              <td>Maintenance Request 103 edit</td>
+              <td>Repair & Maintenance</td>
+              <td>New</td>
+              <td>Autodoc1</td>
+              <td>
+                <a href="javascript:void(0)"><i class="las la-paperclip text-gray font-18"></i></a>
+              </td>
+              <td><a href="javascript:void(0)"><i class="las la-star text-gray font-18"></i></a></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

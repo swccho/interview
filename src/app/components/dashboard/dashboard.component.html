@@ -1,0 +1,432 @@
+<div class="page-title">Dashboard</div>
+<div class="container-fluid dashboard-wrapper">
+  <div class="row mt-2">
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section calender">
+        <div class="section-header-wrapper">
+          <div class="section-title clearfix">
+            <span>Calendar</span>
+            <a href="javascript:void(0)" class="btn-plus float-end"><i class="las la-plus"></i></a>
+          </div>
+        </div>
+        <div class="section-body-wrapper">
+          <full-calendar [options]="calendarOptions"></full-calendar>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section cs_graph">
+        <div class="section-header-wrapper">
+          <div class="section-title">Cases Graph</div>
+        </div>
+        <div class="section-body-wrapper">
+          <div class="section-body-inner">
+            <div class="center-wrapper">
+              <canvas baseChart [data]="doughnutChartData" [legend]="false" [colors]="doughnutChartColors" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section ira">
+        <div class="section-header-wrapper">
+          <div class="section-title">Items Requiring Action</div>
+        </div>
+        <div class="section-body-wrapper">
+          <div class="item-wrapper">
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-wrench"></i> Overdue Cases</span>
+              <span>36</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-user"></i> Contractor Document/Insurance Expired</span>
+              <span>32</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-user"></i> Resident Information Update Requests</span>
+              <span>4</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-server"></i> Overdue Maintenance Schedules</span>
+              <span>1818</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-calendar"></i> Pending Booking</span>
+              <span>1818</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-wrench"></i> Maintenance Requests</span>
+              <span>36</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span><i class="las la-wrench"></i> Asset Warranty Expired</span>
+              <span>36</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section irg">
+        <div class="section-header-wrapper">
+          <div class="section-title">Management Reports Generated</div>
+        </div>
+        <div class="section-body-wrapper">
+            <div class="item-wrapper">
+              <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image blue">
+                    <img src="{{ENV.APP_URL}}/image/wordpress.png" alt="">
+                  </span>
+                  <span class="badge">Report Period 01/10/2021 - 31/10/2021</span>
+                </span>
+                <span class="">Created: 20/10/2021</span>
+              </a>
+              <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="badge">Report Period 01/8/2021 - 30/09/2021</span>
+                </span>
+                <span class="">Created: 18/10/2021</span>
+              </a>
+              <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="badge">Report Period 01/09/2021 - 31/10/2021</span>
+                </span>
+                <span class="">Created: 18/10/2021</span>
+              </a>
+              <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="badge">Report Period 01/10/2021 - 31/10/2021</span>
+                </span>
+                <span class="">Created: 18/10/2021</span>
+              </a>
+              <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image blue">
+                    <img src="{{ENV.APP_URL}}/image/wordpress.png" alt="">
+                  </span>
+                  <span class="badge">Report Period 01/10/2021 - 31/10/2021</span>
+                </span>
+                <span class="">Created: 15/10/2021</span>
+              </a>
+              <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image blue">
+                    <img src="{{ENV.APP_URL}}/image/wordpress.png" alt="">
+                  </span>
+                  <span class="badge">Report Period 01/10/2021 - 31/10/2021</span>
+                </span>
+                <span class="">Created: 15/10/2021</span>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section billing">
+        <div class="section-header-wrapper">
+          <div class="section-title">Building Summary</div>
+        </div>
+        <div class="section-body-wrapper">
+          <div class="item-wrapper">
+            <a href="javascript:void(0)" class="each-items">
+              <span> RESIDENTS</span>
+              <span>36</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span> ASSETS</span>
+              <span>36</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span> CONTRACTORS</span>
+              <span>36</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span> ACTIVE CASES</span>
+              <span>36</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+              <span> WORK ORDERS SENT</span>
+              <span>36</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section work_order">
+        <div class="section-header-wrapper">
+          <div class="section-title">Latest Work Orders Sent</div>
+        </div>
+        <div class="section-body-wrapper">
+          <div class="item-wrapper">
+            <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="itemId">WO#513-A</span>
+                </span>
+              <span class="badge emt" ></span>
+              <span class="badge">Sent: 2021-10-20 12:17:43</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="itemId">WO#513-A</span>
+                </span>
+              <span class="badge emt" ></span>
+              <span class="badge">Sent: 2021-10-18 10:20:43</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="itemId">WO#513-A</span>
+                </span>
+              <span class="badge emt" ></span>
+              <span class="badge">Sent: 2021-10-14 15:48:19</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="itemId">WO#513-A</span>
+                </span>
+              <span class="badge emt" ></span>
+              <span class="badge">Sent: 2021-10-14 10:48:19</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="itemId">WO#513-A</span>
+                </span>
+              <span class="badge emt" ></span>
+              <span class="badge">Sent: 2021-10-14 10:48:19</span>
+            </a>
+            <a href="javascript:void(0)" class="each-items">
+                <span class="section1">
+                  <span class="image red">
+                    <img src="{{ENV.APP_URL}}/image/pdf.png" alt="">
+                  </span>
+                  <span class="itemId">WO#513-A</span>
+                </span>
+              <span class="badge emt" ></span>
+              <span class="badge">Sent: 2021-10-14 10:48:19</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section notes">
+        <div class="section-header-wrapper">
+          <div class="section-title clearfix">
+            <span>Notes</span>
+            <a href="javascript:void(0)" class="btn-plus float-end"><i class="las la-plus"></i></a>
+          </div>
+        </div>
+        <div class="section-body-wrapper">
+          <div class="notes">
+            <div class="input-section">
+              <input type="text" class="form-control" placeholder="Type to search">
+            </div>
+            <div class="allNotes">
+              <div class="eachNotes">
+                  <div class="title clearfix">
+                    <span>Karmela Francia- 24/06/2021</span>
+                    <i class="las la-trash float-end"></i>
+                  </div>
+                <p class="des">
+                  Check recyclables area
+                </p>
+              </div>
+              <div class="eachNotes">
+                <div class="title clearfix">
+                  <span>Moe Syed - 08/06/2021</span>
+                  <i class="las la-trash float-end"></i>
+                </div>
+                <p class="des">
+                  Check rooftops boilers
+                </p>
+              </div>
+              <div class="eachNotes">
+                <div class="title clearfix">
+                  <span>MYBOS DEMO - 26/05/2021</span>
+                  <i class="las la-trash float-end"></i>
+                </div>
+                <p class="des">
+                </p>
+              </div>
+            </div>
+            <div class="text-end w-100">
+              <ul class="pagis">
+              <li><a href="javascript:void(0)"><i class="las la-angle-double-left"></i></a></li>
+              <li><a href="javascript:void(0)"><i class="las la-angle-left"></i></a></li>
+              <li><a href="javascript:void(0)">1</a></li>
+              <li><a href="javascript:void(0)" class="active">2</a></li>
+              <li><a href="javascript:void(0)">3</a></li>
+              <li><a href="javascript:void(0)"><i class="las la-angle-right"></i></a></li>
+              <li><a href="javascript:void(0)"><i class="las la-angle-double-right"></i></a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section important_number">
+        <div class="section-header-wrapper">
+          <div class="section-title clearfix">
+            <span>Important Numbers</span>
+            <a href="javascript:void(0)" class="btn-plus float-end"><i class="las la-plus"></i></a>
+          </div>
+        </div>
+      <div class="section-body-wrapper">
+        <div class="wrapper">
+          <table class="table table-borderless">
+              <thead style="border-bottom: 1px solid #fff">
+              <tr>
+                <th style="color: #fff">Name</th>
+                <th style="color: #fff">Number</th>
+                <th style="color: #fff"></th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fire</td>
+                  <td>999</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Antony Stone</td>
+                  <td>121515151</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>ESP Office</td>
+                  <td>874845</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Pool Service</td>
+                  <td>02 5555 5555</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>DPS</td>
+                  <td>9364 9999</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Crimestoppers</td>
+                  <td>1800 333 000</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Council</td>
+                  <td>0298771144</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Robin</td>
+                  <td>123 456</td>
+                  <td>
+                    <label class="container-checkbox">
+                      <input type="checkbox" >
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="dashboard-section feeds">
+        <div class="section-header-wrapper">
+          <div class="section-title">Activity Feed</div>
+        </div>
+        <div class="section-body-wrapper">
+          <div class="wrapper">
+            <div class="each-date">
+              <div class="date">20/10/2021</div>
+              <ul>
+                <li>12:10pm -Complete inspection Daily Inspection (7118) - Sam Khliaef</li>
+                <li>12:10pm - Change event HVAC Services status to 1 - Sam Khliaef</li>
+                <li>10:10am Update Parcel - Keith tubilan</li>
+                <li>10:10am Update Parcel - Keith tubilan</li>
+                <li>10:10am Add new parcel - Keith tubilan</li>
+                <li>10:10am Add new parcel - Keith tubilan</li>
+              </ul>
+            </div>
+            <div class="each-date">
+              <div class="date">19/10/2021</div>
+              <ul>
+                <li>12:10pm -Complete inspection Daily Inspection (7118) - Sam Khliaef</li>
+                <li>12:10pm - Change event HVAC Services status to 1 - Sam Khliaef</li>
+                <li>10:10am Update Parcel - Keith tubilan</li>
+                <li>10:10am Update Parcel - Keith tubilan</li>
+                <li>10:10am Add new parcel - Keith tubilan</li>
+                <li>10:10am Add new parcel - Keith tubilan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

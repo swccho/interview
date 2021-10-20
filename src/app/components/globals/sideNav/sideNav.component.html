@@ -1,0 +1,33 @@
+
+<div class="address">
+  <div class="card rounded-0" >
+    <img src="{{ENV.APP_URL}}/image/office.jpg" class="card-img-top  rounded-0" alt="...">
+    <div class="card-body" style="padding: 10px">
+      <div class="name d-flex justify-content-between align-items-center">
+        <i class="las la-clock"></i>
+        <span class="">Arch</span>
+      </div>
+      <div class="location text-theme text-end">
+        101 Kraznik road <br>
+        sydney NSW
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="side-menu">
+  <ul>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" [routerLink]="'/'"><i class="las la-tachometer-alt"></i> &nbsp; Dashboard</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" [routerLink]="'cases'"><i class="las la-wrench"></i> &nbsp; cases</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-file-alt"></i> &nbsp; work order sent</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-calendar"></i> &nbsp; calendar</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-clipboard-list"></i> &nbsp; maintenance schedule</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-building"></i> &nbsp; building</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-user"></i> &nbsp; residents</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-key"></i> &nbsp; keys</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-clipboard-check"></i> &nbsp; parcels</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-user-friends"></i> &nbsp; contractors</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><i class="las la-cog"></i> &nbsp; settings</a></li>
+    <li><a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']" href="javascript:void(0)"><img src="{{ENV.APP_URL}}/image/covid.png" alt=""> &nbsp; covid-19 tracker</a></li>
+  </ul>
+</div>
